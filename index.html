@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robux Shop V2</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#f4f9ff;color:#102033}
+header{background:#fff;border-bottom:1px solid #dbe9f7;padding:18px}.wrap{width:min(1050px,92%);margin:auto}
+.logo{font-size:22px;font-weight:900;color:#1687ff}.hero{padding:55px 0}.hero h1{font-size:48px;line-height:1;margin:0 0 15px}.muted{color:#607086}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid #dbe9f7;border-radius:18px;padding:22px;box-shadow:0 10px 30px #1687ff0d}
+.price{font-size:22px;font-weight:800;margin:12px 0}.btn{border:0;border-radius:11px;padding:13px 17px;background:#1687ff;color:#fff;font-weight:800;cursor:pointer}.form{display:grid;gap:10px;max-width:600px}.form input{padding:14px;border:1px solid #cfe0ef;border-radius:10px;background:#fff}.result{margin-top:15px;padding:15px;background:#eef7ff;border-radius:12px;display:none}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:40px}}
+</style></head><body>
+<header><div class="wrap"><div class="logo">ROBUX SHOP</div></div></header>
+<main class="wrap">
+<section class="hero"><h1>Shop Robux<br><span style="color:#1687ff">xanh & trắng</span></h1><p class="muted">V2 kết nối Database và hệ thống đơn hàng.</p></section>
+<section><h2>Gói Robux</h2><div class="grid">
+<div class="card"><h3>400 Robux</h3><div class="price">49.000₫</div><button class="btn" onclick="selectPack(400,49000)">Mua</button></div>
+<div class="card"><h3>800 Robux</h3><div class="price">99.000₫</div><button class="btn" onclick="selectPack(800,99000)">Mua</button></div>
+<div class="card"><h3>1.700 Robux</h3><div class="price">199.000₫</div><button class="btn" onclick="selectPack(1700,199000)">Mua</button></div>
+</div></section>
+<section style="padding:45px 0"><div class="card"><h2>Tạo đơn</h2><div class="form">
+<input id="username" placeholder="Roblox username">
+<input id="selected" readonly placeholder="Chọn gói phía trên">
+<button class="btn" onclick="createOrder()">Tạo đơn thanh toán</button>
+</div><div id="result" class="result"></div></div></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>
